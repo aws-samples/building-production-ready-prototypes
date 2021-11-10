@@ -27,7 +27,7 @@ export class ReviewsApiStack extends Stack {
       },
         lambdaFunctionProps: {
           code: lambda.Code.fromAsset(path.join(__dirname, 'lambda/lambdatosqs')),
-          runtime: lambda.Runtime.NODEJS_12_X,
+          runtime: lambda.Runtime.NODEJS_14_X,
           handler: "index.handler"
         },
         apiGatewayProps: {
@@ -48,7 +48,7 @@ export class ReviewsApiStack extends Stack {
       existingQueueObj: lambdaToSQSConstruct.sqsQueue,
       lambdaFunctionProps: {
         code: lambda.Code.fromAsset(path.join(__dirname, 'lambda/sqstoddb')),
-        runtime: lambda.Runtime.NODEJS_12_X,
+        runtime: lambda.Runtime.NODEJS_14_X,
         handler: "index.handler"
       }
     })
