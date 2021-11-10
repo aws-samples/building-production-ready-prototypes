@@ -1,11 +1,10 @@
-## My Project
+## Building production-ready prototypes
 
-TODO: Fill this README out!
+This repo contains the demo code from the session 'Building production-ready prototypes' delivered at:
 
-Be sure to:
+* re:Invent 2021 - ARC330
 
-* Change the title in this README
-* Edit your repository description on GitHub
+
 
 ## Security
 
