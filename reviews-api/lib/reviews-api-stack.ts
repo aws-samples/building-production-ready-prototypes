@@ -1,4 +1,4 @@
-import { Stack, StackProps } from 'aws-cdk-lib';
+import { Stack, StackProps, Tags } from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import { CognitoToApiGatewayToLambda } from '@aws-solutions-constructs/aws-cognito-apigateway-lambda';
 import { LambdaToSqs } from '@aws-solutions-constructs/aws-lambda-sqs';
@@ -114,5 +114,6 @@ export class ReviewsApiStack extends Stack {
     });
     dashboard.addWidgets(APICountWidget);
     dashboard.addWidgets(lambdaDurationWidget, APILatencyWidget);
+
   }
-  }
+}

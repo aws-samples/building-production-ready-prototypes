@@ -2,9 +2,10 @@
 import 'source-map-support/register';
 import * as cdk from 'aws-cdk-lib';
 import { ReviewsApiStack } from '../lib/reviews-api-stack';
+import { Tags } from 'aws-cdk-lib';
 
 const app = new cdk.App();
-new ReviewsApiStack(app, 'ReviewsApiStack', {
+const reviewsApistack = new ReviewsApiStack(app, 'ReviewsApiStack', {
   /* If you don't specify 'env', this stack will be environment-agnostic.
    * Account/Region-dependent features and context lookups will not work,
    * but a single synthesized template can be deployed anywhere. */
@@ -19,3 +20,5 @@ new ReviewsApiStack(app, 'ReviewsApiStack', {
 
   /* For more information, see https://docs.aws.amazon.com/cdk/latest/guide/environments.html */
 });
+
+Tags.of(reviewsApistack).add('application', 'reviews-api');
