@@ -4,8 +4,6 @@ This repo contains the demo code from the session 'Building production-ready pro
 
 * re:Invent 2021 - ARC330
 
-
-
 ## Security
 
 See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
