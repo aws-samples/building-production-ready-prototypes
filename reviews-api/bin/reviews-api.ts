@@ -1,8 +1,7 @@
 #!/usr/bin/env node
 import 'source-map-support/register';
-import * as cdk from 'aws-cdk-lib';
+import * as cdk from '@aws-cdk/core';
 import { ReviewsApiStack } from '../lib/reviews-api-stack';
-import { Tags } from 'aws-cdk-lib';
 
 const app = new cdk.App();
 const reviewsApistack = new ReviewsApiStack(app, 'ReviewsApiStack', {
@@ -21,4 +20,3 @@ const reviewsApistack = new ReviewsApiStack(app, 'ReviewsApiStack', {
   /* For more information, see https://docs.aws.amazon.com/cdk/latest/guide/environments.html */
 });
 
-Tags.of(reviewsApistack).add('application', 'reviews-api');

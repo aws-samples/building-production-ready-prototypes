@@ -1,11 +1,13 @@
-import * as cdk from 'aws-cdk-lib';
-import * as ReviewsApi from '../lib/reviews-api-stack';
+import { expect as expectCDK, matchTemplate, MatchStyle } from '@aws-cdk/assert';
+import * as cdk from '@aws-cdk/core';
+import * as  ReviewsApiStack from '../lib/reviews-api-stack';
 
 test('Empty Stack', () => {
     const app = new cdk.App();
     // WHEN
-    const stack = new ReviewsApi.ReviewsApiStack(app, 'MyTestStack');
+    const stack = new ReviewsApiStack.ReviewsApiStack(app, 'MyTestStack');
     // THEN
-    const actual = app.synth().getStackArtifact(stack.artifactId).template;
-    expect(actual.Resources ?? {}).toEqual({});
+    expectCDK(stack).to(matchTemplate({
+      "Resources": {}
+    }, MatchStyle.EXACT))
 });

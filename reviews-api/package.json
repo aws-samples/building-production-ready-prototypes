@@ -11,21 +11,26 @@
     "cdk": "cdk"
   },
   "devDependencies": {
+    "@aws-cdk/assert": "1.128.0",
     "@types/jest": "^26.0.10",
     "@types/node": "10.17.27",
-    "aws-cdk": "2.0.0-rc.27",
+    "aws-cdk": "1.128.0",
     "jest": "^26.4.2",
     "ts-jest": "^26.2.0",
     "ts-node": "^9.0.0",
     "typescript": "~3.9.7"
   },
   "dependencies": {
-    "@aws-solutions-constructs/aws-cognito-apigateway-lambda": "^2.0.0-rc.2",
-    "@aws-solutions-constructs/aws-lambda-dynamodb": "^2.0.0-rc.2",
-    "@aws-solutions-constructs/aws-lambda-sqs": "^2.0.0-rc.2",
-    "@aws-solutions-constructs/aws-sqs-lambda": "^2.0.0-rc.2",
-    "aws-cdk-lib": "2.0.0-rc.33",
-    "constructs": "^10.0.0",
+    "@aws-cdk/aws-apigateway": "1.128.0",
+    "@aws-cdk/aws-cloudwatch": "1.128.0",
+    "@aws-cdk/aws-lambda": "1.128.0",
+    "@aws-cdk/core": "1.128.0",
+    "@aws-solutions-constructs/aws-cognito-apigateway-lambda": "1.128.0",
+    "@aws-solutions-constructs/aws-lambda-dynamodb": "1.128.0",
+    "@aws-solutions-constructs/aws-lambda-sqs": "1.128.0",
+    "@aws-solutions-constructs/aws-sqs-lambda": "1.128.0",
     "source-map-support": "^0.5.16"
   }
 }
+
+

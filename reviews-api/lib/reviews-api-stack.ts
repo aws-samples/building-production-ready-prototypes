@@ -1,17 +1,16 @@
-import { Stack, StackProps, Tags } from 'aws-cdk-lib';
-import { Construct } from 'constructs';
+import * as cdk from '@aws-cdk/core';
 import { CognitoToApiGatewayToLambda } from '@aws-solutions-constructs/aws-cognito-apigateway-lambda';
 import { LambdaToSqs } from '@aws-solutions-constructs/aws-lambda-sqs';
 import { SqsToLambda } from '@aws-solutions-constructs/aws-sqs-lambda';
 import { LambdaToDynamoDB } from '@aws-solutions-constructs/aws-lambda-dynamodb';
-import { aws_lambda as lambda } from 'aws-cdk-lib';
-import { aws_apigateway as apigw } from 'aws-cdk-lib';
-import { aws_cloudwatch as cw } from 'aws-cdk-lib';
+import * as lambda from '@aws-cdk/aws-lambda';
+import * as apigw from '@aws-cdk/aws-apigateway';
+import * as cw from '@aws-cdk/aws-cloudwatch';
 import * as path from 'path';
-import { Duration } from 'aws-cdk-lib';
+import { Duration } from '@aws-cdk/core';
 
-export class ReviewsApiStack extends Stack {
-  constructor(scope: Construct, id: string, props?: StackProps) {
+export class ReviewsApiStack extends cdk.Stack {
+  constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
     // The code that defines your stack goes here
